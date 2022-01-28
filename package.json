@@ -1,12 +1,16 @@
 {
-  "name": "project-name",
+  "name": "cbp-js-scss-exercise",
   "version": "1.0.0",
-  "description": "",
+  "description": "Boilerplate for JS/SCSS exercises in Coding Bootcamp Praha",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "create": "gulp structure",
+    "build": "gulp build_dev",
+    "build:prod": "gulp build_prod",
+    "publish": "gulp publish",
+    "watch": "gulp watch"
   },
-  "author": "",
+  "author": "Coding Bootcamp Praha",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.14",
