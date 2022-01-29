@@ -18,6 +18,10 @@ const btn8 = document.getElementById("btn-8");
 const btn9 = document.getElementById("btn-9");
 const btnComma = document.getElementById("btn-comma");
 const btn0 = document.getElementById("btn-0");
+const btnM = document.getElementById("btn-m");
+const btnMMinus = document.getElementById("btn-m-");
+const btnMPlus = document.getElementById("btn-mm");
+const btnMC = document.getElementById("btn-mc");
 
 let arrayOfNumberButtons = [
   btn1,
@@ -35,6 +39,7 @@ let arrayOfNumberButtons = [
 
 let lastOperation = null;
 let lastValue = null;
+let memory = null;
 
 btnPlus.addEventListener("click", () => {
   summingFunction();
@@ -88,6 +93,30 @@ arrayOfNumberButtons.forEach((element) => {
     }
     input.value += value;
   });
+});
+
+//adding a number in input field into a memory
+btnM.addEventListener("click", () => {
+  const inputValue = Number(input.value);
+  memory = inputValue;
+  console.log(memory);
+});
+
+btnMPlus.addEventListener("click", () => {
+  const inputValue = Number(input.value);
+  memory += inputValue;
+  console.log(memory);
+});
+
+btnMMinus.addEventListener("click", () => {
+  const inputValue = Number(input.value);
+  memory -= inputValue;
+  console.log(memory);
+});
+
+btnMC.addEventListener("click", () => {
+  memory = 0;
+  console.log(memory);
 });
 
 //function that does summing
