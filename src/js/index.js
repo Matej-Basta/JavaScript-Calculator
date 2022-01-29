@@ -23,6 +23,7 @@ const btnMMinus = document.getElementById("btn-m-");
 const btnMPlus = document.getElementById("btn-mm");
 const btnMC = document.getElementById("btn-mc");
 
+//grouping all the number buttons
 let arrayOfNumberButtons = [
   btn1,
   btn2,
@@ -37,10 +38,12 @@ let arrayOfNumberButtons = [
   btn0,
 ];
 
+//variables that are used in order to use memory, and remember the last value and operation
 let lastOperation = null;
 let lastValue = null;
 let memory = null;
 
+//functions of buttons
 btnPlus.addEventListener("click", () => {
   summingFunction();
   lastOperation = "plus";
@@ -102,18 +105,21 @@ btnM.addEventListener("click", () => {
   console.log(memory);
 });
 
+//adding a number in input to a memory number
 btnMPlus.addEventListener("click", () => {
   const inputValue = Number(input.value);
   memory += inputValue;
   console.log(memory);
 });
 
+//subtracting a number in input to a memory number
 btnMMinus.addEventListener("click", () => {
   const inputValue = Number(input.value);
   memory -= inputValue;
   console.log(memory);
 });
 
+//clearing the memory
 btnMC.addEventListener("click", () => {
   memory = 0;
   console.log(memory);
